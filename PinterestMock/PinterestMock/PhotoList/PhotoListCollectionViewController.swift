@@ -67,7 +67,7 @@ class PhotoListCollectionViewController: UICollectionViewController {
             UIView.animate(
                 withDuration: 0.2,
                 delay: 0,
-                options: UIViewAnimationOptions.curveEaseOut,
+                options: UIView.AnimationOptions.curveEaseOut,
                 animations: {
                     photocell.containerView.layer.borderColor = UIColor.lightGray.cgColor
                     photocell.containerView.layer.borderWidth = 4.0
@@ -82,7 +82,7 @@ class PhotoListCollectionViewController: UICollectionViewController {
             UIView.animate(
                 withDuration: 0.2,
                 delay: 0,
-                options: UIViewAnimationOptions.curveEaseOut,
+                options: UIView.AnimationOptions.curveEaseOut,
                 animations: {
                     photocell.containerView.layer.borderColor = UIColor.clear.cgColor
                     photocell.containerView.layer.borderWidth = 0.0
@@ -112,7 +112,7 @@ class PhotoListCollectionViewController: UICollectionViewController {
         let theAttributes:UICollectionViewLayoutAttributes! = collectionView.layoutAttributesForItem(at: indexPath)
         zoomRect = collectionView.convert(theAttributes.frame, to: collectionView.superview)
         self.presentPopViewController(indexPath: indexPath)
-        collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredVertically, animated: true)
+        collectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredVertically, animated: true)
         
     }
 }
